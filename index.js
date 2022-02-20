@@ -73,7 +73,7 @@ class getNodeLTS {
 
   json () {
     console.log(JSON.stringify(
-      this.getActive()
+      this.latestMajorVersions()
     ))
   }
 
@@ -90,6 +90,15 @@ class getNodeLTS {
         this._printLatest()
         break
     }
+  }
+
+  latestMajorVersions() {
+    lmv = [];
+    for (const m of this.getActive()) {
+      const v = this.majorsLatest[m]
+      lmv.push(v.version.substring(1));
+    }
+    return lmv;
   }
 
   _printLatest() {
