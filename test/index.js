@@ -18,6 +18,14 @@ describe('index', function () {
     .catch(done)
   })
 
+  it('prints json versions', function (done) {
+    ltsv.fetch().then(() => {
+      ltsv.json()
+      done()
+    })
+    .catch(done)
+  })
+
   it('prints a report of maintained LTS versions', function (done) {
     ltsv.fetch().then(() => {
       ltsv.print()
