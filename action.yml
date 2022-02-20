@@ -1,9 +1,9 @@
 name: Node LTS versions
 author: Matt Simerson, Travis Truman
-description: Get list of maintained LTS node.js versions (active + maintenance)
+description: Get list of LTS node.js versions (active + maintenance)
 runs:
   using: 'node12'
   main: 'dist/index.js'
 outputs:
   lts:
-    description: maintained LTS versions of node.js
+    description: List of LTS versions of node.js
