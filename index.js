@@ -93,7 +93,7 @@ class getNodeLTS {
   }
 
   latestMajorVersions() {
-    lmv = [];
+    var lmv = [];
     for (const m of this.getActive()) {
       const v = this.majorsLatest[m]
       lmv.push(v.version.substring(1));
