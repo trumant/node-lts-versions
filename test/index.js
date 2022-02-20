@@ -20,7 +20,8 @@ describe('index', function () {
 
   it('prints json versions', function (done) {
     ltsv.fetch().then(() => {
-      ltsv.json()
+      var j = ltsv.json()
+      console.log(j)
       done()
     })
     .catch(done)

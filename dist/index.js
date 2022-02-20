@@ -77,9 +77,7 @@ class getNodeLTS {
   }
 
   json () {
-    console.log(JSON.stringify(
-      this.latestMajorVersions()
-    ))
+    return JSON.stringify(this.latestMajorVersions());
   }
 
   yaml () {
